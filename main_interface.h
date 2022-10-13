@@ -87,7 +87,7 @@ public:
 		return op_result;
 	}
 
-	vector<int>* insert_element_to_cleaning_data_base(int room_num, int build, string emp, int day, int mounth, int year)
+	auto insert_element_to_cleaning_data_base(int room_num, int build, string emp, int day, int mounth, int year)
 	{
 		Ñleaning* tmp_struct = new Ñleaning{ emp, build, room_num, {day, mounth, year} };
 		auto path = cleaning_data_base->insertWrap(tmp_struct);
@@ -120,14 +120,13 @@ public:
 
 		for (auto item : *sub_result)
 		{
-			auto tmp_2 = room_data_base->search_index(item.data->get_room_num());
+			auto tmp_2 = room_data_base->search_index(item->get_room_num());
 			if (!tmp_2)
 				continue;
 			auto tmp = tmp_2->get_type();
 			if (tmp == type)
-				result.push_back(item.data);
+				result.push_back(item);
 		}
-
 		return result;
 	}
 };

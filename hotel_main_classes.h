@@ -13,7 +13,9 @@ class Ñleaning
 		int year;
 		date_type() : day{}, mounth{}, year{} {}
 		date_type(int day_, int mounth_, int year_) : day{ day_ }, mounth{ mounth_ }, year{ year_ } {}
+
 		int get_int_time() { day + 30 * mounth + 365 * year; }
+
 		bool operator ==(const date_type& other)
 		{
 			return day == other.day && mounth == other.mounth && year == other.year;
@@ -43,6 +45,9 @@ class Ñleaning
 			out << object.day << ":" << object.mounth << ":" << object.year;
 			return out;
 		}
+		int get_day() { return day; }
+		int get_mounth() { return mounth; }
+		int get_year() { return year; }
 	};
 	string employee;
 	int building;
@@ -53,7 +58,13 @@ public:
 		employee{ employee_ }, building{ building_ }, room_number{ room_number_ }, date{ date_ } {}
 	Ñleaning(date_type date_) : employee{}, building{}, room_number{}, date{date_} {}
 	Ñleaning() : employee{}, building{}, room_number{}, date{} {}
+
 	date_type get_date() { return date; }
+
+	System::String^ get_date_string()
+	{
+		return "<" + date.get_day() + "/" + date.get_mounth() + "/" + date.get_year() + ">";
+	}
 	operator int() const
 	{
 		//return room_number;
@@ -69,10 +80,16 @@ public:
 		return result;
 	}
 
-	System::String^ get_all_date()
+	/*System::String^ get_all_date()
 	{
 		auto str_e = gcnew System::String(employee.c_str());
 		return date.day.ToString() + "/" + date.mounth.ToString() + "/" + date.year.ToString() + "(" + str_e + ")";
+	}*/
+
+	System::String^ get_all_date()
+	{
+		auto str_e = gcnew System::String(employee.c_str());
+		return (date.day + 30 * date.mounth + 365 * date.year).ToString() + "(" + str_e + ")";
 	}
 
 	bool operator ==(const Ñleaning& other)

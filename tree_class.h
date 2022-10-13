@@ -123,7 +123,6 @@ public:
 		return balance(p);
 	}
 
-	
 
 	vector<int>* insertWrap(T key)
 	{
@@ -139,8 +138,6 @@ public:
 		root = remove(root, key, is_it_deleted);
 		return is_it_deleted;
 	}
-
-
 
 
 	void searchOrderTravers(node* head, int num, vector<T>* res) // прямой обход (1)
@@ -163,17 +160,6 @@ public:
 	}
 
 
-	//void preOrderTravers(node* head, CustomVector<T>* res, T low, T high) // перегрузка для поиска
-	//{
-	//	if (head != NULL)
-	//	{
-	//		if (*head->key >= *low && *head->key <= *high)
-	//			res->push_back(head->key);
-	//		preOrderTravers(head->left, res, low, high);
-	//		preOrderTravers(head->right, res, low, high);
-	//	}
-	//}
-
 	void sortOrderTravers(node* head, vector<T>* res) // обход с выводом в отсортированном порядке (Центрированный)
 	{
 		if (head != NULL)
@@ -192,7 +178,7 @@ public:
 		return items;
 	}
 
-	void SearchInRange(node* head, CustomVector<T>* res, T low, T high, int& comp) // перегрузка для поиска
+	void SearchInRange(node* head, vector<T>* res, T low, T high, int& comp) // перегрузка для поиска
 	{
 		if (head != NULL)
 		{
@@ -206,10 +192,10 @@ public:
 		}
 	}
 
-	CustomVector<T>* find_in_ranges_pre_order(T low, T high, int& comp) /// решение поисковой задачи
+	vector<T>* find_in_ranges_pre_order(T low, T high, int& comp) /// решение поисковой задачи
 	{
 		node* head = root;
-		CustomVector<T>* result{ new CustomVector<T> };
+		vector<T>* result{ new vector<T> };
 		SearchInRange(head, result, low, high, comp);
 		return result;
 	}

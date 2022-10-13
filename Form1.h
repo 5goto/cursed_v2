@@ -86,10 +86,10 @@ namespace CppCLRWinformsProjekt {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn1;
 	private: System::Windows::Forms::GroupBox^ LogBox;
 	private: System::Windows::Forms::DataGridView^ LogGridView;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn3;
+
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn2;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Rooms;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Cleanings;
+
+
 
 
 
@@ -114,8 +114,13 @@ private: System::Windows::Forms::NumericUpDown^ CleaningBuildInput;
 private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 	private: System::Windows::Forms::Label^ label16;
 	private: System::Windows::Forms::NumericUpDown^ HashTableSize;
-	public: System::Windows::Forms::TextBox^ TypeRoomInsert;
+
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Results;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Cleanings;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Rooms;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn3;
+	private: System::Windows::Forms::ComboBox^ TypeRoomInsert;
+
 	public:
 	private:
 
@@ -149,6 +154,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->InputDayFirst = (gcnew System::Windows::Forms::NumericUpDown());
 			this->InputMounthSecond = (gcnew System::Windows::Forms::NumericUpDown());
 			this->ResultWindow = (gcnew System::Windows::Forms::DataGridView());
+			this->Results = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->InputDaySecond = (gcnew System::Windows::Forms::NumericUpDown());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
@@ -158,9 +164,9 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->Сleanings = (gcnew System::Windows::Forms::GroupBox());
 			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->HashTableSize = (gcnew System::Windows::Forms::NumericUpDown());
+			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->CleaningBuildInput = (gcnew System::Windows::Forms::NumericUpDown());
 			this->CleaningNumInput = (gcnew System::Windows::Forms::NumericUpDown());
-			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->CleaningEmpInput = (gcnew System::Windows::Forms::TextBox());
@@ -176,7 +182,6 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->CleaningWindow = (gcnew System::Windows::Forms::DataGridView());
 			this->Cleanings = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Room_box = (gcnew System::Windows::Forms::GroupBox());
-			this->TypeRoomInsert = (gcnew System::Windows::Forms::TextBox());
 			this->RoomBuildInput = (gcnew System::Windows::Forms::NumericUpDown());
 			this->RoomNumberInput = (gcnew System::Windows::Forms::NumericUpDown());
 			this->label12 = (gcnew System::Windows::Forms::Label());
@@ -197,7 +202,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->DebagRoom = (gcnew System::Windows::Forms::GroupBox());
 			this->dataGridRoomDebug = (gcnew System::Windows::Forms::DataGridView());
 			this->dataGridViewTextBoxColumn1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Results = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->TypeRoomInsert = (gcnew System::Windows::Forms::ComboBox());
 			this->SearchTab->SuspendLayout();
 			this->groupBoxResult->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->InputYearFirst))->BeginInit();
@@ -243,15 +248,15 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->label1->ForeColor = System::Drawing::SystemColors::InfoText;
 			this->label1->Location = System::Drawing::Point(48, 520);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(93, 24);
+			this->label1->Size = System::Drawing::Size(134, 24);
 			this->label1->TabIndex = 4;
-			this->label1->Text = L"Room type";
+			this->label1->Text = L"Тип комнаты";
 			// 
 			// comboType
 			// 
 			this->comboType->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->comboType->FormattingEnabled = true;
-			this->comboType->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"0", L"1", L"2", L"3" });
+			this->comboType->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"Standard", L"Superior", L"Studio", L"Delux" });
 			this->comboType->Location = System::Drawing::Point(39, 549);
 			this->comboType->Name = L"comboType";
 			this->comboType->Size = System::Drawing::Size(132, 36);
@@ -302,11 +307,11 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label6->ForeColor = System::Drawing::SystemColors::InfoText;
-			this->label6->Location = System::Drawing::Point(198, 575);
+			this->label6->Location = System::Drawing::Point(228, 573);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(83, 32);
+			this->label6->Size = System::Drawing::Size(43, 32);
 			this->label6->TabIndex = 13;
-			this->label6->Text = L"End";
+			this->label6->Text = L"До";
 			// 
 			// InputYearFirst
 			// 
@@ -327,7 +332,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->GenerateResult->Name = L"GenerateResult";
 			this->GenerateResult->Size = System::Drawing::Size(591, 53);
 			this->GenerateResult->TabIndex = 3;
-			this->GenerateResult->Text = L"Find";
+			this->GenerateResult->Text = L"Найти";
 			this->GenerateResult->UseVisualStyleBackColor = true;
 			this->GenerateResult->Click += gcnew System::EventHandler(this, &Form1::GenerateResult_Click);
 			// 
@@ -386,6 +391,12 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->ResultWindow->TabIndex = 2;
 			this->ResultWindow->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Form1::dataGridView1_CellContentClick);
 			// 
+			// Results
+			// 
+			this->Results->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Results->HeaderText = L"Результат поиска";
+			this->Results->Name = L"Results";
+			// 
 			// InputDaySecond
 			// 
 			this->InputDaySecond->BackColor = System::Drawing::SystemColors::ButtonFace;
@@ -403,11 +414,11 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label5->ForeColor = System::Drawing::SystemColors::InfoText;
-			this->label5->Location = System::Drawing::Point(193, 520);
+			this->label5->Location = System::Drawing::Point(244, 520);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(88, 32);
+			this->label5->Size = System::Drawing::Size(27, 32);
 			this->label5->TabIndex = 12;
-			this->label5->Text = L"Beginning";
+			this->label5->Text = L"С";
 			// 
 			// label2
 			// 
@@ -415,11 +426,11 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label2->ForeColor = System::Drawing::SystemColors::InfoText;
-			this->label2->Location = System::Drawing::Point(310, 489);
+			this->label2->Location = System::Drawing::Point(301, 489);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(39, 24);
+			this->label2->Size = System::Drawing::Size(48, 24);
 			this->label2->TabIndex = 8;
-			this->label2->Text = L"Day";
+			this->label2->Text = L"День";
 			// 
 			// label3
 			// 
@@ -431,7 +442,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(88, 24);
 			this->label3->TabIndex = 5;
-			this->label3->Text = L"Mounth";
+			this->label3->Text = L"Месяц";
 			// 
 			// label4
 			// 
@@ -443,7 +454,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(69, 24);
 			this->label4->TabIndex = 8;
-			this->label4->Text = L"Year";
+			this->label4->Text = L"Год";
 			// 
 			// ContPage
 			// 
@@ -462,9 +473,9 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->Сleanings->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->Сleanings->Controls->Add(this->label16);
 			this->Сleanings->Controls->Add(this->HashTableSize);
+			this->Сleanings->Controls->Add(this->label15);
 			this->Сleanings->Controls->Add(this->CleaningBuildInput);
 			this->Сleanings->Controls->Add(this->CleaningNumInput);
-			this->Сleanings->Controls->Add(this->label15);
 			this->Сleanings->Controls->Add(this->label14);
 			this->Сleanings->Controls->Add(this->label13);
 			this->Сleanings->Controls->Add(this->CleaningEmpInput);
@@ -485,7 +496,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->Сleanings->Size = System::Drawing::Size(676, 646);
 			this->Сleanings->TabIndex = 6;
 			this->Сleanings->TabStop = false;
-			this->Сleanings->Text = L"List of Сleanings";
+			this->Сleanings->Text = L"Список работ";
 			// 
 			// label16
 			// 
@@ -493,11 +504,11 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->label16->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label16->ForeColor = System::Drawing::SystemColors::InfoText;
-			this->label16->Location = System::Drawing::Point(551, 8);
+			this->label16->Location = System::Drawing::Point(494, 8);
 			this->label16->Name = L"label16";
-			this->label16->Size = System::Drawing::Size(131, 24);
+			this->label16->Size = System::Drawing::Size(188, 24);
 			this->label16->TabIndex = 23;
-			this->label16->Text = L"Hash Table Size";
+			this->label16->Text = L"Размер хэш таблицы";
 			// 
 			// HashTableSize
 			// 
@@ -509,6 +520,18 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->HashTableSize->Size = System::Drawing::Size(70, 33);
 			this->HashTableSize->TabIndex = 22;
 			this->HashTableSize->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			// 
+			// label15
+			// 
+			this->label15->FlatStyle = System::Windows::Forms::FlatStyle::System;
+			this->label15->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label15->ForeColor = System::Drawing::SystemColors::InfoText;
+			this->label15->Location = System::Drawing::Point(0, 561);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(99, 24);
+			this->label15->TabIndex = 19;
+			this->label15->Text = L"Сотрудник";
 			// 
 			// CleaningBuildInput
 			// 
@@ -532,29 +555,17 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->CleaningNumInput->TabIndex = 20;
 			this->CleaningNumInput->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			// 
-			// label15
-			// 
-			this->label15->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->label15->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->label15->ForeColor = System::Drawing::SystemColors::InfoText;
-			this->label15->Location = System::Drawing::Point(6, 562);
-			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(77, 24);
-			this->label15->TabIndex = 19;
-			this->label15->Text = L"Employee";
-			// 
 			// label14
 			// 
 			this->label14->FlatStyle = System::Windows::Forms::FlatStyle::System;
 			this->label14->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label14->ForeColor = System::Drawing::SystemColors::InfoText;
-			this->label14->Location = System::Drawing::Point(89, 562);
+			this->label14->Location = System::Drawing::Point(99, 561);
 			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(117, 24);
+			this->label14->Size = System::Drawing::Size(102, 24);
 			this->label14->TabIndex = 11;
-			this->label14->Text = L"Room number";
+			this->label14->Text = L"Номер ком.";
 			// 
 			// label13
 			// 
@@ -562,11 +573,11 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->label13->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label13->ForeColor = System::Drawing::SystemColors::InfoText;
-			this->label13->Location = System::Drawing::Point(212, 562);
+			this->label13->Location = System::Drawing::Point(197, 562);
 			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(76, 24);
+			this->label13->Size = System::Drawing::Size(97, 24);
 			this->label13->TabIndex = 18;
-			this->label13->Text = L"Building";
+			this->label13->Text = L"Закреплен";
 			// 
 			// CleaningEmpInput
 			// 
@@ -614,11 +625,12 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->label8->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label8->ForeColor = System::Drawing::SystemColors::InfoText;
-			this->label8->Location = System::Drawing::Point(294, 562);
+			this->label8->Location = System::Drawing::Point(315, 562);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(39, 24);
+			this->label8->Size = System::Drawing::Size(43, 24);
 			this->label8->TabIndex = 13;
-			this->label8->Text = L"Day";
+			this->label8->Text = L"День";
+			this->label8->Click += gcnew System::EventHandler(this, &Form1::label8_Click);
 			// 
 			// label9
 			// 
@@ -630,7 +642,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(88, 23);
 			this->label9->TabIndex = 12;
-			this->label9->Text = L"Mounth";
+			this->label9->Text = L"Месяц";
 			// 
 			// label10
 			// 
@@ -642,7 +654,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(69, 23);
 			this->label10->TabIndex = 14;
-			this->label10->Text = L"Year";
+			this->label10->Text = L"Год";
 			// 
 			// DeleteFromTreeButton
 			// 
@@ -687,7 +699,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			// Cleanings
 			// 
 			this->Cleanings->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
-			this->Cleanings->HeaderText = L"Cleanings";
+			this->Cleanings->HeaderText = L"Работы";
 			this->Cleanings->Name = L"Cleanings";
 			this->Cleanings->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
 			// 
@@ -710,14 +722,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->Room_box->Size = System::Drawing::Size(642, 646);
 			this->Room_box->TabIndex = 7;
 			this->Room_box->TabStop = false;
-			this->Room_box->Text = L"List of Rooms";
-			// 
-			// TypeRoomInsert
-			// 
-			this->TypeRoomInsert->Location = System::Drawing::Point(39, 601);
-			this->TypeRoomInsert->Name = L"TypeRoomInsert";
-			this->TypeRoomInsert->Size = System::Drawing::Size(132, 33);
-			this->TypeRoomInsert->TabIndex = 24;
+			this->Room_box->Text = L"Список комнат";
 			// 
 			// RoomBuildInput
 			// 
@@ -747,11 +752,11 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->label12->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label12->ForeColor = System::Drawing::SystemColors::InfoText;
-			this->label12->Location = System::Drawing::Point(462, 562);
+			this->label12->Location = System::Drawing::Point(417, 562);
 			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(127, 24);
+			this->label12->Size = System::Drawing::Size(172, 24);
 			this->label12->TabIndex = 10;
-			this->label12->Text = L"Building";
+			this->label12->Text = L"Номер здания";
 			// 
 			// label11
 			// 
@@ -759,11 +764,11 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->label11->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label11->ForeColor = System::Drawing::SystemColors::InfoText;
-			this->label11->Location = System::Drawing::Point(239, 562);
+			this->label11->Location = System::Drawing::Point(233, 562);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(127, 24);
+			this->label11->Size = System::Drawing::Size(146, 24);
 			this->label11->TabIndex = 9;
-			this->label11->Text = L"Room number";
+			this->label11->Text = L"Номер ком.";
 			// 
 			// label7
 			// 
@@ -773,9 +778,9 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->label7->ForeColor = System::Drawing::SystemColors::InfoText;
 			this->label7->Location = System::Drawing::Point(52, 562);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(93, 24);
+			this->label7->Size = System::Drawing::Size(119, 24);
 			this->label7->TabIndex = 6;
-			this->label7->Text = L"Room type";
+			this->label7->Text = L"Тип комнаты";
 			// 
 			// DeleteFromHashButton
 			// 
@@ -802,7 +807,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->RoomsWindow->BackgroundColor = System::Drawing::SystemColors::ButtonFace;
 			this->RoomsWindow->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->RoomsWindow->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(1) { this->Rooms });
-			this->RoomsWindow->Location = System::Drawing::Point(39, 34);
+			this->RoomsWindow->Location = System::Drawing::Point(25, 35);
 			this->RoomsWindow->Name = L"RoomsWindow";
 			this->RoomsWindow->Size = System::Drawing::Size(564, 525);
 			this->RoomsWindow->TabIndex = 2;
@@ -810,7 +815,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			// Rooms
 			// 
 			this->Rooms->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
-			this->Rooms->HeaderText = L"Rooms";
+			this->Rooms->HeaderText = L"Комнаты";
 			this->Rooms->Name = L"Rooms";
 			this->Rooms->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
 			// 
@@ -864,7 +869,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			// dataGridViewTextBoxColumn3
 			// 
 			this->dataGridViewTextBoxColumn3->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
-			this->dataGridViewTextBoxColumn3->HeaderText = L"Таблица";
+			this->dataGridViewTextBoxColumn3->HeaderText = L"События";
 			this->dataGridViewTextBoxColumn3->Name = L"dataGridViewTextBoxColumn3";
 			// 
 			// DebugClean
@@ -878,7 +883,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->DebugClean->Size = System::Drawing::Size(433, 685);
 			this->DebugClean->TabIndex = 9;
 			this->DebugClean->TabStop = false;
-			this->DebugClean->Text = L"Дерево поиска (Cleaning)";
+			this->DebugClean->Text = L"Дерево поиска";
 			// 
 			// dataGridCleanDebug
 			// 
@@ -907,7 +912,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->DebagRoom->Size = System::Drawing::Size(449, 685);
 			this->DebagRoom->TabIndex = 8;
 			this->DebagRoom->TabStop = false;
-			this->DebagRoom->Text = L"Хэш таблица (Rooms)";
+			this->DebagRoom->Text = L"Хэш таблица";
 			// 
 			// dataGridRoomDebug
 			// 
@@ -925,21 +930,25 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->dataGridViewTextBoxColumn1->HeaderText = L"Таблица";
 			this->dataGridViewTextBoxColumn1->Name = L"dataGridViewTextBoxColumn1";
 			// 
-			// Results
+			// TypeRoomInsert
 			// 
-			this->Results->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
-			this->Results->HeaderText = L"Результат поиска";
-			this->Results->Name = L"Results";
+			this->TypeRoomInsert->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->TypeRoomInsert->FormattingEnabled = true;
+			this->TypeRoomInsert->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"Standard", L"Superior", L"Studio", L"Delux" });
+			this->TypeRoomInsert->Location = System::Drawing::Point(39, 600);
+			this->TypeRoomInsert->Name = L"TypeRoomInsert";
+			this->TypeRoomInsert->Size = System::Drawing::Size(132, 35);
+			this->TypeRoomInsert->TabIndex = 13;
 			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->ClientSize = System::Drawing::Size(1370, 684);
+			this->ClientSize = System::Drawing::Size(1370, 730);
 			this->Controls->Add(this->tabControl1);
 			this->Name = L"Form1";
-			this->Text = L"Kursed";
+			this->Text = L"Обслуживание помещений";
 			this->SearchTab->ResumeLayout(false);
 			this->groupBoxResult->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->InputYearFirst))->EndInit();
@@ -960,7 +969,6 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->CleaningDay))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->CleaningWindow))->EndInit();
 			this->Room_box->ResumeLayout(false);
-			this->Room_box->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->RoomBuildInput))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->RoomNumberInput))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->RoomsWindow))->EndInit();
@@ -1023,12 +1031,12 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 		for (auto item : *hash_table)
 		{
 			if (item.cell_status == status::free)
-				dataGridRoomDebug->Rows[i]->Cells[0]->Value = "Free";
+				dataGridRoomDebug->Rows[i]->Cells[0]->Value = i + "| " + "Free";
 			else if (item.cell_status == status::deleted)
-				dataGridRoomDebug->Rows[i]->Cells[0]->Value = "Deleted";
+				dataGridRoomDebug->Rows[i]->Cells[0]->Value = i + "| " + "Deleted";
 			else
 			{
-				dataGridRoomDebug->Rows[i]->Cells[0]->Value = item.data->get_all_data_string();
+				dataGridRoomDebug->Rows[i]->Cells[0]->Value = i + "| " + item.data->get_all_data_string();
 			}
 			++i;
 		}
@@ -1049,10 +1057,39 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 		}
 	}
 
+	private: System::Boolean check_room_number_in_table(int room_number)
+	{
+		auto hash_table = test.get_all_hash_table();
+		for (auto item : *hash_table)
+		{
+			if (item.cell_status == status::occupied)
+			{
+				if (item.data->get_room_num() == room_number)
+					return true;
+			}
+		}
+		return false;
+	}
+
 private: System::Void GenerateResult_Click(System::Object^ sender, System::EventArgs^ e) {  // Result button
 	if (test.is_bases_inited())
 	{
-		auto room_type = Convert::ToInt32(comboType->SelectedItem);
+		auto room_type = comboType->SelectedItem;
+
+		int room_type_int;
+		if (room_type == "Standard")
+			room_type_int = 0;
+		else if (room_type == "Superior")
+			room_type_int = 1;
+		else if (room_type == "Studio")
+			room_type_int = 2;
+		else if (room_type == "Delux")
+			room_type_int = 3;
+		else
+		{
+			MessageBox::Show("Не корректен тип комнаты", "Поиск");
+			return;
+		}
 
 		auto fir_day = Convert::ToInt32(InputDayFirst->Value);
 		auto sec_day = Convert::ToInt32(InputDaySecond->Value);
@@ -1065,7 +1102,7 @@ private: System::Void GenerateResult_Click(System::Object^ sender, System::Event
 
 		int comparsions{};
 
-		auto res = test.print_intermediate_result(room_type, fir_day, sec_day,
+		auto res = test.print_intermediate_result(room_type_int, fir_day, sec_day,
 			fir_mon, sec_mon, fir_yer, sec_yer, comparsions);
 
 		if (res.size() != 0)
@@ -1113,22 +1150,20 @@ private: System::Void InsertToHashButton_Click(System::Object^ sender, System::E
 	// room input
 	if (test.is_bases_inited())
 	{
-		auto room_t = TypeRoomInsert->Text;
+		auto room_t = TypeRoomInsert->SelectedItem;
 		auto room_num = Convert::ToInt32(RoomNumberInput->Value);
 		auto room_build = Convert::ToInt32(RoomBuildInput->Value);
 
-		std::string tmp;
-		MarshalString(room_t, tmp);
 
 		int room_type_int{};
 
-		if (tmp == "Standard")
+		if (room_t == "Standard")
 			room_type_int = 0;
-		else if(tmp == "Superior")
+		else if(room_t == "Superior")
 			room_type_int = 1;
-		else if (tmp == "Studio")
+		else if (room_t == "Studio")
 			room_type_int = 2;
-		else if (tmp == "Delux")
+		else if (room_t == "Delux")
 			room_type_int = 3;
 		else
 		{
@@ -1169,22 +1204,20 @@ private: System::Void DeleteFromHashButton_Click(System::Object^ sender, System:
 	if (test.is_bases_inited())
 	{
 		// инициализация данных из формы
-		auto room_t = TypeRoomInsert->Text;
+		auto room_t = TypeRoomInsert->SelectedItem;
 		auto room_num = Convert::ToInt32(RoomNumberInput->Value);
 		auto room_build = Convert::ToInt32(RoomBuildInput->Value);
 
-		std::string tmp;
-		MarshalString(room_t, tmp);
 
 		int room_type_int{};
 
-		if (tmp == "Standard")
+		if (room_t == "Standard")
 			room_type_int = 0;
-		else if (tmp == "Superior")
+		else if (room_t == "Superior")
 			room_type_int = 1;
-		else if (tmp == "Studio")
+		else if (room_t == "Studio")
 			room_type_int = 2;
-		else if (tmp == "Delux")
+		else if (room_t == "Delux")
 			room_type_int = 3;
 		else
 		{
@@ -1194,20 +1227,24 @@ private: System::Void DeleteFromHashButton_Click(System::Object^ sender, System:
 
 		auto operation_result = test.delete_element_from_room_data_base(room_type_int, room_build, room_num);
 		if (operation_result == -1)
-			MessageBox::Show("Элемент отсутсвует в таблице", "Room::Delete");
+			MessageBox::Show("Элемент отсутствует в таблице", "Room::Delete");
 		else
 		{
 			// удаление из побочной таблицы
 			auto found = test.find_all_elements_by_num(room_num);
 			if (found->size() != 0)
 			{
-				MessageBox::Show("Будут удалены " + found->size() + " записей побочной таблицы", "Удаление из главной таблицы");
+				MessageBox::Show("К удалению предланаются " + found->size() + " записей побочной таблицы", "Удаление из побочной таблицы");
 				for (auto item : *found)
 				{
-					test.delete_element_to_cleaning_data_base(item->get_room_num(), item->get_build(),
-						item->get_emp(), item->get_day(), item->get_mounth(), item->get_year());
-					LogGridView->Rows[log_counter]->Cells[0]->Value = item->get_room_num() + " deleted from tree";
-					log_counter++;
+					if (MessageBox::Show("Желаете удалить запись " + item->get_all_data_string() + "?", "Удаление из побочной таблицы",
+						MessageBoxButtons::YesNo, MessageBoxIcon::Question) == System::Windows::Forms::DialogResult::Yes)
+					{
+						test.delete_element_to_cleaning_data_base(item->get_room_num(), item->get_build(),
+							item->get_emp(), item->get_day(), item->get_mounth(), item->get_year());
+						LogGridView->Rows[log_counter]->Cells[0]->Value = item->get_room_num() + " deleted from tree";
+						log_counter++;
+					}
 				}
 			}
 
@@ -1232,6 +1269,16 @@ private: System::Void InsertToTreeButton_Click(System::Object^ sender, System::E
 		auto day = Convert::ToInt32(CleaningDay->Value);
 		auto mounth = Convert::ToInt32(CleaningMounth->Value);
 		auto year = Convert::ToInt32(CleaningYear->Value);
+
+		if (emp == "")
+			return;
+
+		if (!check_room_number_in_table(room_num))
+		{
+			MessageBox::Show("Комната с указанным номером отсутствует", "Вставка в дерево");
+			return;
+		}
+
 		// маршализация строки
 		std::string tmp;
 		MarshalString(emp, tmp); 
@@ -1260,6 +1307,10 @@ private: System::Void DeleteFromTreeButton_Click(System::Object^ sender, System:
 		auto day = Convert::ToInt32(CleaningDay->Value);
 		auto mounth = Convert::ToInt32(CleaningMounth->Value);
 		auto year = Convert::ToInt32(CleaningYear->Value);
+
+		if (emp == "")
+			return;
+
 		// маршализация строки
 		std::string tmp;
 		MarshalString(emp, tmp);
@@ -1275,10 +1326,12 @@ private: System::Void DeleteFromTreeButton_Click(System::Object^ sender, System:
 			log_counter++;
 		}
 		else
-			MessageBox::Show("Указанный элемент остуствует в дереве", "Cleaning delete");
+			MessageBox::Show("Указанный элемент отсутствует в дереве", "Cleaning delete");
 	}
 	else
 		MessageBox::Show("Необходимо инициализировать базы данных(Init)", "Data bases");
+}
+private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

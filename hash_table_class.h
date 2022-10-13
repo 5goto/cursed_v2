@@ -38,7 +38,7 @@ class SimpleHashTable  // Контейнер - хэш таблица
 
 	cell* table;
 	int size;
-	vector<int> used;
+	/*vector<int> used;*/
 protected:
 	template<class Iter>  // класс итератор
 	class NodeIterator
@@ -196,7 +196,7 @@ public:
 		return size;
 	}
 
-	void table_print()
+	/*void table_print()
 	{
 		for (auto i = 0; i < size; i++)
 			if (table[i].cell_status == status::occupied)
@@ -206,7 +206,7 @@ public:
 			else
 				cout << i << ")" << " Deleted" << endl;
 		cout << endl;
-	}
+	}*/
 
 
 	T search_index(int key_)
