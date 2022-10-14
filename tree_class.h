@@ -192,6 +192,26 @@ public:
 		}
 	}
 
+	auto tree_search(T object)
+	{
+		node* head = root;
+		if (head != NULL)
+		{
+			while (head != nullptr)
+			{
+				if (*head->key == *object && head->key->get_room_num() == object->get_room_num()
+					&& head->key->get_build() == object->get_build() && head->key->get_emp() == object->get_emp())
+					return true;
+				else if (*head->key < *object)
+					head = head->right;
+				else
+					head = head->left;
+			}
+		}
+		else
+			return false;
+	}
+
 	vector<T>* find_in_ranges_pre_order(T low, T high, int& comp) /// решение поисковой задачи
 	{
 		node* head = root;

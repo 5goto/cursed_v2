@@ -85,26 +85,7 @@ protected:
 
 
 	//////// основные закрытые матоды
-	int search_index(T item)
-	{
-		int try_counter{ 1 };
-		int key = mod_hash_function((int)*item);
-		int key_ = key;
-		while (try_counter <= size || table[key_].cell_status != status::free)
-		{
-			if (table[key_].data != NULL && *table[key_].data == *item)
-				if (table[key_].cell_status == status::deleted)
-					return -1;
-				else
-					return key_;
-			else
-			{
-				key_ = (mod_hash_function(key) + try_counter) % size;
-				try_counter++;
-			}
-		}
-		return -1;
-	}
+	
 
 
 	bool is_table_has_enough_space()
@@ -208,6 +189,26 @@ public:
 		cout << endl;
 	}*/
 
+	int search_index(T item)
+	{
+		int try_counter{ 1 };
+		int key = mod_hash_function((int)*item);
+		int key_ = key;
+		while (try_counter <= size || table[key_].cell_status != status::free)
+		{
+			if (table[key_].data != NULL && *table[key_].data == *item)
+				if (table[key_].cell_status == status::deleted)
+					return -1;
+				else
+					return key_;
+			else
+			{
+				key_ = (mod_hash_function(key) + try_counter) % size;
+				try_counter++;
+			}
+		}
+		return -1;
+	}
 
 	T search_index(int key_)
 	{
