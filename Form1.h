@@ -120,6 +120,9 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Rooms;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn3;
 	private: System::Windows::Forms::ComboBox^ TypeRoomInsert;
+	private: System::Windows::Forms::Button^ SearchInTable;
+
+	private: System::Windows::Forms::Button^ Search_Tree;
 
 	public:
 	private:
@@ -161,6 +164,8 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->ContPage = (gcnew System::Windows::Forms::TabPage());
+			this->SearchInTable = (gcnew System::Windows::Forms::Button());
+			this->Search_Tree = (gcnew System::Windows::Forms::Button());
 			this->Сleanings = (gcnew System::Windows::Forms::GroupBox());
 			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->HashTableSize = (gcnew System::Windows::Forms::NumericUpDown());
@@ -182,6 +187,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->CleaningWindow = (gcnew System::Windows::Forms::DataGridView());
 			this->Cleanings = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Room_box = (gcnew System::Windows::Forms::GroupBox());
+			this->TypeRoomInsert = (gcnew System::Windows::Forms::ComboBox());
 			this->RoomBuildInput = (gcnew System::Windows::Forms::NumericUpDown());
 			this->RoomNumberInput = (gcnew System::Windows::Forms::NumericUpDown());
 			this->label12 = (gcnew System::Windows::Forms::Label());
@@ -202,7 +208,6 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->DebagRoom = (gcnew System::Windows::Forms::GroupBox());
 			this->dataGridRoomDebug = (gcnew System::Windows::Forms::DataGridView());
 			this->dataGridViewTextBoxColumn1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->TypeRoomInsert = (gcnew System::Windows::Forms::ComboBox());
 			this->SearchTab->SuspendLayout();
 			this->groupBoxResult->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->InputYearFirst))->BeginInit();
@@ -458,6 +463,8 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			// 
 			// ContPage
 			// 
+			this->ContPage->Controls->Add(this->SearchInTable);
+			this->ContPage->Controls->Add(this->Search_Tree);
 			this->ContPage->Controls->Add(this->Сleanings);
 			this->ContPage->Controls->Add(this->Room_box);
 			this->ContPage->Location = System::Drawing::Point(4, 22);
@@ -467,6 +474,30 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->ContPage->TabIndex = 0;
 			this->ContPage->Text = L"Контейнеры";
 			this->ContPage->UseVisualStyleBackColor = true;
+			// 
+			// SearchInTable
+			// 
+			this->SearchInTable->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->SearchInTable->Location = System::Drawing::Point(185, 648);
+			this->SearchInTable->Name = L"SearchInTable";
+			this->SearchInTable->Size = System::Drawing::Size(211, 36);
+			this->SearchInTable->TabIndex = 9;
+			this->SearchInTable->Text = L"Найти";
+			this->SearchInTable->UseVisualStyleBackColor = true;
+			this->SearchInTable->Click += gcnew System::EventHandler(this, &Form1::SearchInTable_Click);
+			// 
+			// Search_Tree
+			// 
+			this->Search_Tree->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->Search_Tree->Location = System::Drawing::Point(832, 648);
+			this->Search_Tree->Name = L"Search_Tree";
+			this->Search_Tree->Size = System::Drawing::Size(211, 36);
+			this->Search_Tree->TabIndex = 8;
+			this->Search_Tree->Text = L"Найти";
+			this->Search_Tree->UseVisualStyleBackColor = true;
+			this->Search_Tree->Click += gcnew System::EventHandler(this, &Form1::Search_Tree_Click);
 			// 
 			// Сleanings
 			// 
@@ -724,6 +755,16 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->Room_box->TabStop = false;
 			this->Room_box->Text = L"Список комнат";
 			// 
+			// TypeRoomInsert
+			// 
+			this->TypeRoomInsert->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->TypeRoomInsert->FormattingEnabled = true;
+			this->TypeRoomInsert->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"Standard", L"Superior", L"Studio", L"Delux" });
+			this->TypeRoomInsert->Location = System::Drawing::Point(39, 600);
+			this->TypeRoomInsert->Name = L"TypeRoomInsert";
+			this->TypeRoomInsert->Size = System::Drawing::Size(132, 35);
+			this->TypeRoomInsert->TabIndex = 13;
+			// 
 			// RoomBuildInput
 			// 
 			this->RoomBuildInput->BackColor = System::Drawing::SystemColors::ButtonFace;
@@ -929,16 +970,6 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->dataGridViewTextBoxColumn1->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
 			this->dataGridViewTextBoxColumn1->HeaderText = L"Таблица";
 			this->dataGridViewTextBoxColumn1->Name = L"dataGridViewTextBoxColumn1";
-			// 
-			// TypeRoomInsert
-			// 
-			this->TypeRoomInsert->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->TypeRoomInsert->FormattingEnabled = true;
-			this->TypeRoomInsert->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"Standard", L"Superior", L"Studio", L"Delux" });
-			this->TypeRoomInsert->Location = System::Drawing::Point(39, 600);
-			this->TypeRoomInsert->Name = L"TypeRoomInsert";
-			this->TypeRoomInsert->Size = System::Drawing::Size(132, 35);
-			this->TypeRoomInsert->TabIndex = 13;
 			// 
 			// Form1
 			// 
@@ -1297,6 +1328,9 @@ private: System::Void InsertToTreeButton_Click(System::Object^ sender, System::E
 	else
 		MessageBox::Show("Необходимо инициализировать базы данных(Init)", "Data bases");
 }
+
+
+
 private: System::Void DeleteFromTreeButton_Click(System::Object^ sender, System::EventArgs^ e) {
 	if (test.is_bases_inited())
 	{
@@ -1332,6 +1366,73 @@ private: System::Void DeleteFromTreeButton_Click(System::Object^ sender, System:
 		MessageBox::Show("Необходимо инициализировать базы данных(Init)", "Data bases");
 }
 private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void Search_Tree_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (test.is_bases_inited())
+	{
+		// получаем данные из формы
+		auto emp = CleaningEmpInput->Text;
+		auto room_num = Convert::ToInt32(CleaningNumInput->Value);
+		auto room_build = Convert::ToInt32(CleaningBuildInput->Value);
+		auto day = Convert::ToInt32(CleaningDay->Value);
+		auto mounth = Convert::ToInt32(CleaningMounth->Value);
+		auto year = Convert::ToInt32(CleaningYear->Value);
+
+		if (emp == "")
+			return;
+
+		// маршализация строки
+		std::string tmp;
+		MarshalString(emp, tmp);
+
+		tmp += " ";
+
+		auto operation_code = test.find_object_in_tree(room_num, room_build, tmp, day, mounth, year);
+
+		if (operation_code)
+			MessageBox::Show("Объект " + emp + ":" + room_num + ":" + room_build + ":" + day + "/" + mounth + "/" + year + " найден", "SearchInTree");
+		else
+			MessageBox::Show("Объект не найден", "SearchInTree");
+
+	}
+	else
+		MessageBox::Show("Необходимо инициализировать базы данных(Init)", "Data bases");
+}
+private: System::Void SearchInTable_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (test.is_bases_inited())
+	{
+		// получаем данные из формы
+		auto room_t = TypeRoomInsert->SelectedItem;
+		auto room_num = Convert::ToInt32(RoomNumberInput->Value);
+		auto room_build = Convert::ToInt32(RoomBuildInput->Value);
+
+
+		int room_type_int{};
+
+		if (room_t == "Standard")
+			room_type_int = 0;
+		else if (room_t == "Superior")
+			room_type_int = 1;
+		else if (room_t == "Studio")
+			room_type_int = 2;
+		else if (room_t == "Delux")
+			room_type_int = 3;
+		else
+		{
+			MessageBox::Show("Не корректен тип комнаты", "Room::Insert");
+			return;
+		}
+
+		auto operation_code = test.find_object_in_table(room_type_int, room_build, room_num);
+
+		if (operation_code)
+			MessageBox::Show("Объект " + room_t + ":" + room_num + ":" + room_build  + " найден", "SearchInTable");
+		else
+			MessageBox::Show("Объект не найден", "SearchInTable");
+
+	}
+	else
+		MessageBox::Show("Необходимо инициализировать базы данных(Init)", "Data bases");
 }
 };
 }

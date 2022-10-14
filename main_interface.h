@@ -107,6 +107,23 @@ public:
 		return elements_found;
 	}
 
+	auto find_object_in_tree(int room_num, int build, string emp, int day, int mounth, int year)
+	{
+		Ñleaning* tmp_struct = new Ñleaning{ emp, build, room_num, {day, mounth, year} };
+		return cleaning_data_base->tree_search(tmp_struct);
+	}
+
+	auto find_object_in_table(int room_t, int build, int room_num)
+	{
+		Room* tmp_struct = new Room{ build, room_num, room_t };
+		int operation_result = room_data_base->search_index(tmp_struct);
+		if (operation_result != -1)
+			return true;
+		else
+			return false;
+	}
+
+
 	auto print_intermediate_result(int type, int fir_day, int sec_day,
 		int fir_mon, int sec_mon, int fir_yer, int sec_yer, int& comparsions)
 	{
