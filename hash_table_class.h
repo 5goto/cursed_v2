@@ -8,7 +8,7 @@
 
 using namespace std;
 
-enum class status
+enum class status // состояния ячейки
 {
 	free, occupied, deleted
 };

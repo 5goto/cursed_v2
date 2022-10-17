@@ -89,7 +89,7 @@ public:
 	AVL_tree() : root{ nullptr } {}
 
 
-	node* insert(node* p, T k, vector<int>* path) // вставка ключа k в дерево с корнем p
+	node* insert(node* p, T k, vector<int>* path)                               // вставка ключа k в дерево с корнем p
 	{
 		if (!p) return new node(k);
 		path->push_back(*(p->key));
@@ -101,7 +101,7 @@ public:
 	}
 
 
-	node* remove(node* p, T k, bool* deleted) // удаление ключа k из дерева p
+	node* remove(node* p, T k, bool* deleted)										// удаление ключа k из дерева p
 	{
 		if (!p) return 0;
 		if ((int)(*k) < *(p->key))

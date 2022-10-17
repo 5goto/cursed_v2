@@ -248,7 +248,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			// label1
 			// 
 			this->label1->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Century", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label1->ForeColor = System::Drawing::SystemColors::InfoText;
 			this->label1->Location = System::Drawing::Point(48, 520);
@@ -264,7 +264,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->comboType->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"Standard", L"Superior", L"Studio", L"Delux" });
 			this->comboType->Location = System::Drawing::Point(39, 549);
 			this->comboType->Name = L"comboType";
-			this->comboType->Size = System::Drawing::Size(132, 36);
+			this->comboType->Size = System::Drawing::Size(132, 28);
 			this->comboType->TabIndex = 3;
 			this->comboType->SelectedIndexChanged += gcnew System::EventHandler(this, &Form1::comboType_SelectedIndexChanged);
 			// 
@@ -297,7 +297,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->groupBoxResult->Controls->Add(this->label2);
 			this->groupBoxResult->Controls->Add(this->label3);
 			this->groupBoxResult->Controls->Add(this->label4);
-			this->groupBoxResult->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->groupBoxResult->Font = (gcnew System::Drawing::Font(L"Century", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->groupBoxResult->Location = System::Drawing::Point(6, 6);
 			this->groupBoxResult->Name = L"groupBoxResult";
@@ -309,7 +309,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			// label6
 			// 
 			this->label6->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label6->Font = (gcnew System::Drawing::Font(L"Century", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label6->ForeColor = System::Drawing::SystemColors::InfoText;
 			this->label6->Location = System::Drawing::Point(228, 573);
@@ -325,13 +325,13 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->InputYearFirst->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 2022, 0, 0, 0 });
 			this->InputYearFirst->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1980, 0, 0, 0 });
 			this->InputYearFirst->Name = L"InputYearFirst";
-			this->InputYearFirst->Size = System::Drawing::Size(83, 36);
+			this->InputYearFirst->Size = System::Drawing::Size(83, 27);
 			this->InputYearFirst->TabIndex = 5;
 			this->InputYearFirst->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1980, 0, 0, 0 });
 			// 
 			// GenerateResult
 			// 
-			this->GenerateResult->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->GenerateResult->Font = (gcnew System::Drawing::Font(L"Century", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->GenerateResult->Location = System::Drawing::Point(39, 629);
 			this->GenerateResult->Name = L"GenerateResult";
@@ -348,7 +348,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->InputMounthFirst->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 12, 0, 0, 0 });
 			this->InputMounthFirst->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->InputMounthFirst->Name = L"InputMounthFirst";
-			this->InputMounthFirst->Size = System::Drawing::Size(88, 36);
+			this->InputMounthFirst->Size = System::Drawing::Size(88, 27);
 			this->InputMounthFirst->TabIndex = 4;
 			this->InputMounthFirst->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			// 
@@ -359,7 +359,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->InputYearSecond->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 2022, 0, 0, 0 });
 			this->InputYearSecond->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1980, 0, 0, 0 });
 			this->InputYearSecond->Name = L"InputYearSecond";
-			this->InputYearSecond->Size = System::Drawing::Size(83, 36);
+			this->InputYearSecond->Size = System::Drawing::Size(83, 27);
 			this->InputYearSecond->TabIndex = 11;
 			this->InputYearSecond->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1980, 0, 0, 0 });
 			// 
@@ -370,7 +370,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->InputDayFirst->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 30, 0, 0, 0 });
 			this->InputDayFirst->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->InputDayFirst->Name = L"InputDayFirst";
-			this->InputDayFirst->Size = System::Drawing::Size(88, 36);
+			this->InputDayFirst->Size = System::Drawing::Size(88, 27);
 			this->InputDayFirst->TabIndex = 3;
 			this->InputDayFirst->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			// 
@@ -381,7 +381,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->InputMounthSecond->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 12, 0, 0, 0 });
 			this->InputMounthSecond->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->InputMounthSecond->Name = L"InputMounthSecond";
-			this->InputMounthSecond->Size = System::Drawing::Size(88, 36);
+			this->InputMounthSecond->Size = System::Drawing::Size(88, 27);
 			this->InputMounthSecond->TabIndex = 10;
 			this->InputMounthSecond->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			// 
@@ -409,14 +409,14 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->InputDaySecond->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 30, 0, 0, 0 });
 			this->InputDaySecond->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->InputDaySecond->Name = L"InputDaySecond";
-			this->InputDaySecond->Size = System::Drawing::Size(88, 36);
+			this->InputDaySecond->Size = System::Drawing::Size(88, 27);
 			this->InputDaySecond->TabIndex = 9;
 			this->InputDaySecond->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			// 
 			// label5
 			// 
 			this->label5->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label5->Font = (gcnew System::Drawing::Font(L"Century", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label5->ForeColor = System::Drawing::SystemColors::InfoText;
 			this->label5->Location = System::Drawing::Point(244, 520);
@@ -428,7 +428,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			// label2
 			// 
 			this->label2->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label2->Font = (gcnew System::Drawing::Font(L"Century", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label2->ForeColor = System::Drawing::SystemColors::InfoText;
 			this->label2->Location = System::Drawing::Point(301, 489);
@@ -440,7 +440,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			// label3
 			// 
 			this->label3->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label3->Font = (gcnew System::Drawing::Font(L"Century", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label3->ForeColor = System::Drawing::SystemColors::InfoText;
 			this->label3->Location = System::Drawing::Point(398, 489);
@@ -452,7 +452,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			// label4
 			// 
 			this->label4->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label4->Font = (gcnew System::Drawing::Font(L"Century", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label4->ForeColor = System::Drawing::SystemColors::InfoText;
 			this->label4->Location = System::Drawing::Point(506, 489);
@@ -477,7 +477,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			// 
 			// SearchInTable
 			// 
-			this->SearchInTable->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->SearchInTable->Font = (gcnew System::Drawing::Font(L"Century", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->SearchInTable->Location = System::Drawing::Point(185, 648);
 			this->SearchInTable->Name = L"SearchInTable";
@@ -489,7 +489,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			// 
 			// Search_Tree
 			// 
-			this->Search_Tree->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->Search_Tree->Font = (gcnew System::Drawing::Font(L"Century", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->Search_Tree->Location = System::Drawing::Point(832, 648);
 			this->Search_Tree->Name = L"Search_Tree";
@@ -520,7 +520,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->Ñleanings->Controls->Add(this->InsertToTreeButton);
 			this->Ñleanings->Controls->Add(this->InitData);
 			this->Ñleanings->Controls->Add(this->CleaningWindow);
-			this->Ñleanings->Font = (gcnew System::Drawing::Font(L"Segoe Script", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Ñleanings->Font = (gcnew System::Drawing::Font(L"Century", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->Ñleanings->Location = System::Drawing::Point(654, 6);
 			this->Ñleanings->Name = L"Ñleanings";
@@ -532,7 +532,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			// label16
 			// 
 			this->label16->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->label16->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label16->Font = (gcnew System::Drawing::Font(L"Century", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label16->ForeColor = System::Drawing::SystemColors::InfoText;
 			this->label16->Location = System::Drawing::Point(494, 8);
@@ -548,14 +548,14 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->HashTableSize->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->HashTableSize->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->HashTableSize->Name = L"HashTableSize";
-			this->HashTableSize->Size = System::Drawing::Size(70, 33);
+			this->HashTableSize->Size = System::Drawing::Size(70, 27);
 			this->HashTableSize->TabIndex = 22;
 			this->HashTableSize->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			// 
 			// label15
 			// 
 			this->label15->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->label15->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label15->Font = (gcnew System::Drawing::Font(L"Century", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label15->ForeColor = System::Drawing::SystemColors::InfoText;
 			this->label15->Location = System::Drawing::Point(0, 561);
@@ -571,7 +571,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->CleaningBuildInput->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->CleaningBuildInput->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->CleaningBuildInput->Name = L"CleaningBuildInput";
-			this->CleaningBuildInput->Size = System::Drawing::Size(88, 33);
+			this->CleaningBuildInput->Size = System::Drawing::Size(88, 27);
 			this->CleaningBuildInput->TabIndex = 21;
 			this->CleaningBuildInput->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			// 
@@ -582,14 +582,14 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->CleaningNumInput->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->CleaningNumInput->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->CleaningNumInput->Name = L"CleaningNumInput";
-			this->CleaningNumInput->Size = System::Drawing::Size(88, 33);
+			this->CleaningNumInput->Size = System::Drawing::Size(88, 27);
 			this->CleaningNumInput->TabIndex = 20;
 			this->CleaningNumInput->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			// 
 			// label14
 			// 
 			this->label14->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->label14->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label14->Font = (gcnew System::Drawing::Font(L"Century", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label14->ForeColor = System::Drawing::SystemColors::InfoText;
 			this->label14->Location = System::Drawing::Point(99, 561);
@@ -601,7 +601,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			// label13
 			// 
 			this->label13->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->label13->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label13->Font = (gcnew System::Drawing::Font(L"Century", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label13->ForeColor = System::Drawing::SystemColors::InfoText;
 			this->label13->Location = System::Drawing::Point(197, 562);
@@ -614,7 +614,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			// 
 			this->CleaningEmpInput->Location = System::Drawing::Point(0, 599);
 			this->CleaningEmpInput->Name = L"CleaningEmpInput";
-			this->CleaningEmpInput->Size = System::Drawing::Size(93, 33);
+			this->CleaningEmpInput->Size = System::Drawing::Size(93, 27);
 			this->CleaningEmpInput->TabIndex = 17;
 			// 
 			// CleaningYear
@@ -624,7 +624,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->CleaningYear->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 2022, 0, 0, 0 });
 			this->CleaningYear->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1980, 0, 0, 0 });
 			this->CleaningYear->Name = L"CleaningYear";
-			this->CleaningYear->Size = System::Drawing::Size(83, 33);
+			this->CleaningYear->Size = System::Drawing::Size(83, 27);
 			this->CleaningYear->TabIndex = 11;
 			this->CleaningYear->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1980, 0, 0, 0 });
 			// 
@@ -635,7 +635,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->CleaningMounth->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 12, 0, 0, 0 });
 			this->CleaningMounth->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->CleaningMounth->Name = L"CleaningMounth";
-			this->CleaningMounth->Size = System::Drawing::Size(88, 33);
+			this->CleaningMounth->Size = System::Drawing::Size(88, 27);
 			this->CleaningMounth->TabIndex = 10;
 			this->CleaningMounth->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			// 
@@ -646,14 +646,14 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->CleaningDay->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 30, 0, 0, 0 });
 			this->CleaningDay->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->CleaningDay->Name = L"CleaningDay";
-			this->CleaningDay->Size = System::Drawing::Size(88, 33);
+			this->CleaningDay->Size = System::Drawing::Size(88, 27);
 			this->CleaningDay->TabIndex = 9;
 			this->CleaningDay->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			// 
 			// label8
 			// 
 			this->label8->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->label8->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label8->Font = (gcnew System::Drawing::Font(L"Century", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label8->ForeColor = System::Drawing::SystemColors::InfoText;
 			this->label8->Location = System::Drawing::Point(315, 562);
@@ -666,7 +666,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			// label9
 			// 
 			this->label9->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->label9->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label9->Font = (gcnew System::Drawing::Font(L"Century", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label9->ForeColor = System::Drawing::SystemColors::InfoText;
 			this->label9->Location = System::Drawing::Point(381, 562);
@@ -678,7 +678,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			// label10
 			// 
 			this->label10->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->label10->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label10->Font = (gcnew System::Drawing::Font(L"Century", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label10->ForeColor = System::Drawing::SystemColors::InfoText;
 			this->label10->Location = System::Drawing::Point(489, 562);
@@ -746,7 +746,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->Room_box->Controls->Add(this->DeleteFromHashButton);
 			this->Room_box->Controls->Add(this->InsertToHashButton);
 			this->Room_box->Controls->Add(this->RoomsWindow);
-			this->Room_box->Font = (gcnew System::Drawing::Font(L"Segoe Script", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Room_box->Font = (gcnew System::Drawing::Font(L"Century", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->Room_box->Location = System::Drawing::Point(6, 6);
 			this->Room_box->Name = L"Room_box";
@@ -762,7 +762,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->TypeRoomInsert->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"Standard", L"Superior", L"Studio", L"Delux" });
 			this->TypeRoomInsert->Location = System::Drawing::Point(39, 600);
 			this->TypeRoomInsert->Name = L"TypeRoomInsert";
-			this->TypeRoomInsert->Size = System::Drawing::Size(132, 35);
+			this->TypeRoomInsert->Size = System::Drawing::Size(132, 28);
 			this->TypeRoomInsert->TabIndex = 13;
 			// 
 			// RoomBuildInput
@@ -772,7 +772,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->RoomBuildInput->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->RoomBuildInput->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->RoomBuildInput->Name = L"RoomBuildInput";
-			this->RoomBuildInput->Size = System::Drawing::Size(207, 33);
+			this->RoomBuildInput->Size = System::Drawing::Size(207, 27);
 			this->RoomBuildInput->TabIndex = 12;
 			this->RoomBuildInput->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			// 
@@ -783,14 +783,14 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			this->RoomNumberInput->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->RoomNumberInput->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->RoomNumberInput->Name = L"RoomNumberInput";
-			this->RoomNumberInput->Size = System::Drawing::Size(213, 33);
+			this->RoomNumberInput->Size = System::Drawing::Size(213, 27);
 			this->RoomNumberInput->TabIndex = 11;
 			this->RoomNumberInput->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			// 
 			// label12
 			// 
 			this->label12->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->label12->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label12->Font = (gcnew System::Drawing::Font(L"Century", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label12->ForeColor = System::Drawing::SystemColors::InfoText;
 			this->label12->Location = System::Drawing::Point(417, 562);
@@ -802,7 +802,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			// label11
 			// 
 			this->label11->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->label11->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label11->Font = (gcnew System::Drawing::Font(L"Century", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label11->ForeColor = System::Drawing::SystemColors::InfoText;
 			this->label11->Location = System::Drawing::Point(233, 562);
@@ -814,7 +814,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			// label7
 			// 
 			this->label7->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Segoe Print", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label7->Font = (gcnew System::Drawing::Font(L"Century", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label7->ForeColor = System::Drawing::SystemColors::InfoText;
 			this->label7->Location = System::Drawing::Point(52, 562);
@@ -888,7 +888,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			// 
 			this->LogBox->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->LogBox->Controls->Add(this->LogGridView);
-			this->LogBox->Font = (gcnew System::Drawing::Font(L"Segoe Script", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->LogBox->Font = (gcnew System::Drawing::Font(L"Century", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->LogBox->Location = System::Drawing::Point(903, 6);
 			this->LogBox->Name = L"LogBox";
@@ -917,7 +917,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			// 
 			this->DebugClean->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->DebugClean->Controls->Add(this->dataGridCleanDebug);
-			this->DebugClean->Font = (gcnew System::Drawing::Font(L"Segoe Script", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->DebugClean->Font = (gcnew System::Drawing::Font(L"Century", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->DebugClean->Location = System::Drawing::Point(461, 6);
 			this->DebugClean->Name = L"DebugClean";
@@ -946,7 +946,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			// 
 			this->DebagRoom->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->DebagRoom->Controls->Add(this->dataGridRoomDebug);
-			this->DebagRoom->Font = (gcnew System::Drawing::Font(L"Segoe Script", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->DebagRoom->Font = (gcnew System::Drawing::Font(L"Century", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->DebagRoom->Location = System::Drawing::Point(6, 6);
 			this->DebagRoom->Name = L"DebagRoom";
@@ -1039,6 +1039,12 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 	{
 		auto res = test.get_all_tree_for_drawning();
 
+		if (res->Count == 0)
+		{
+			dataGridCleanDebug->Rows->Clear();
+			return;
+		}
+
 		dataGridCleanDebug->ColumnCount = 1;
 		dataGridCleanDebug->RowCount = res->Count;
 
@@ -1077,6 +1083,14 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 	{
 		auto tree = test.get_all_tree_for_debug()->get_all_items();
 
+		if (tree->size() == 0)
+		{
+			CleaningWindow->Rows->Clear();
+			return;
+		}
+
+		CleaningWindow->Rows->Clear();
+
 		CleaningWindow->ColumnCount = 1;
 		CleaningWindow->RowCount = tree->size();
 
@@ -1086,6 +1100,7 @@ private: System::Windows::Forms::NumericUpDown^ CleaningNumInput;
 			CleaningWindow->Rows[i]->Cells[0]->Value = item->get_all_data_string();
 			++i;
 		}
+
 	}
 
 	private: System::Boolean check_room_number_in_table(int room_number)
@@ -1304,6 +1319,7 @@ private: System::Void InsertToTreeButton_Click(System::Object^ sender, System::E
 		if (emp == "")
 			return;
 
+
 		if (!check_room_number_in_table(room_num))
 		{
 			MessageBox::Show("Êîìíàòà ñ óêàçàííûì íîìåðîì îòñóòñòâóåò", "Âñòàâêà â äåðåâî");
@@ -1313,6 +1329,8 @@ private: System::Void InsertToTreeButton_Click(System::Object^ sender, System::E
 		// ìàðøàëèçàöèÿ ñòðîêè
 		std::string tmp;
 		MarshalString(emp, tmp); 
+
+		tmp += " ";
 		// äîáàâëåíèå 
 		auto tree_path = test.insert_element_to_cleaning_data_base(room_num, room_build, tmp, day, mounth, year);
 
@@ -1348,6 +1366,8 @@ private: System::Void DeleteFromTreeButton_Click(System::Object^ sender, System:
 		// ìàðøàëèçàöèÿ ñòðîêè
 		std::string tmp;
 		MarshalString(emp, tmp);
+
+		tmp += " ";
 
 		auto tree_path = test.delete_element_to_cleaning_data_base(room_num, room_build, tmp, day, mounth, year);
 
@@ -1390,10 +1410,17 @@ private: System::Void Search_Tree_Click(System::Object^ sender, System::EventArg
 		auto operation_code = test.find_object_in_tree(room_num, room_build, tmp, day, mounth, year);
 
 		if (operation_code)
-			MessageBox::Show("Îáúåêò " + emp + ":" + room_num + ":" + room_build + ":" + day + "/" + mounth + "/" + year + " íàéäåí", "SearchInTree");
+		{
+			Ñleaning* tmp_struct = new Ñleaning{ tmp, room_build, room_num, {day, mounth, year} };
+			paint_current_cells_by_object_in_tree(tmp_struct);
+			LogGridView->Rows[log_counter]->Cells[0]->Value = "[Search][+]" + emp + ":" + room_num + ":" + room_build + ":" + day + "/" + mounth + "/" + year;
+			log_counter++;
+		}
 		else
-			MessageBox::Show("Îáúåêò íå íàéäåí", "SearchInTree");
-
+		{
+			LogGridView->Rows[log_counter]->Cells[0]->Value = "[Search][-]" + emp + ":" + room_num + ":" + room_build + ":" + day + "/" + mounth + "/" + year;
+			log_counter++;
+		}
 	}
 	else
 		MessageBox::Show("Íåîáõîäèìî èíèöèàëèçèðîâàòü áàçû äàííûõ(Init)", "Data bases");
@@ -1425,14 +1452,60 @@ private: System::Void SearchInTable_Click(System::Object^ sender, System::EventA
 
 		auto operation_code = test.find_object_in_table(room_type_int, room_build, room_num);
 
+		
 		if (operation_code)
-			MessageBox::Show("Îáúåêò " + room_t + ":" + room_num + ":" + room_build  + " íàéäåí", "SearchInTable");
+		{
+			Room* tmp_struct = new Room{ room_build, room_num, room_type_int };
+			paint_current_cells_by_object_in_table(tmp_struct);
+			//MessageBox::Show("Îáúåêò " + room_t + ":" + room_num + ":" + room_build + " íàéäåí", "SearchInTable");
+			LogGridView->Rows[log_counter]->Cells[0]->Value = "[Search][+]" + room_t + ":" + room_num + ":" + room_build;
+			log_counter++;
+		}
 		else
-			MessageBox::Show("Îáúåêò íå íàéäåí", "SearchInTable");
-
+		{
+			LogGridView->Rows[log_counter]->Cells[0]->Value = "[Search][-]" + room_t + ":" + room_num + ":" + room_build;
+			log_counter++;
+		}
 	}
 	else
 		MessageBox::Show("Íåîáõîäèìî èíèöèàëèçèðîâàòü áàçû äàííûõ(Init)", "Data bases");
 }
+	   private: System::Void paint_current_cells_by_object_in_table(Room* obj)
+	   {
+		   print_room_data_base();
+
+		   auto hash_table = test.get_all_hash_table();
+		   auto table_size = test.get_hash_table_size();
+
+		  
+		   auto j = 0;
+		   for (auto item : *hash_table)
+		   {
+			   if (item.cell_status == status::occupied)
+			   {
+				   if (*item.data == *obj)
+				   {
+					   RoomsWindow->Rows[j]->Cells[0]->Style->ForeColor = System::Drawing::Color::DarkRed;
+				   }
+				   ++j;
+			   }
+		   }
+	   }
+
+		private: System::Void paint_current_cells_by_object_in_tree(Ñleaning* obj)
+		{
+			print_cleaning_data_base();
+
+			auto tree = test.get_all_tree_for_debug()->get_all_items();
+
+
+			auto i = 0;
+			for (auto item : *tree)
+			{
+				if(*item == *obj)
+					CleaningWindow->Rows[i]->Cells[0]->Style->ForeColor = System::Drawing::Color::DarkRed;
+				++i;
+			}
+		}
 };
 }
